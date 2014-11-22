@@ -1,0 +1,14 @@
+/* 
+* Options styling
+*/
+
+.ab-shortcode { color: #2ea2cc; }
+.wp-editor-wrap { width: 80%; }
+.ab-mail-subject { width: 40%; }
+
+@media only screen and (max-width: 959px) {
+ 
+    .wp-editor-wrap { width: 100%; }
+    
+}
+
