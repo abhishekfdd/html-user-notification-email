@@ -16,8 +16,8 @@ This plugin was created by Abhishek Kumar http://github.com/abhishekfdd
 
 == Installation ==
 
-1. Install Disable Html New User Notification either via the WordPress.org plugin directory, or by uploading the files to your server.
-2. Activate Disable Html New User Notification.
+1. Install Html New User Notification either via the WordPress.org plugin directory, or by uploading the files to your server.
+2. Activate Html New User Notification.
 
 == Changelog ==
 
