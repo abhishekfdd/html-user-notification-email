@@ -19,6 +19,11 @@ This plugin was created by Abhishek Kumar http://github.com/abhishekfdd
 1. Install Html New User Notification either via the WordPress.org plugin directory, or by uploading the files to your server.
 2. Activate Html New User Notification.
 
+== Screenshots ==
+
+1. Add the mail content.
+
+
 == Changelog ==
 
 = 1.0.0 =
