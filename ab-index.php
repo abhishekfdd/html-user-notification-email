@@ -2,7 +2,7 @@
 
 /**
  * Plugin Name: Html New User Notification
- * Plugin URI: https://wordpress.org/plugins
+ * Plugin URI: https://wordpress.org/plugins/html-new-user-notification-email/
  * Description: New user notification mail
  * Version: 1.0
  * Author: Abhishek Kumar
