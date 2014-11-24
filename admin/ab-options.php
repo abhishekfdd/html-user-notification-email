@@ -6,7 +6,7 @@
  */
 function ab_plugin_options() {
     ?>
-    <div class="wrap">
+    <div class="wrap ab-html-notification-wrap">
         <h2><?php _e('Html User Notification', 'abs'); ?></h2>
         <h4><?php _e('Shortcode\'s', 'abs'); ?></h4>
         <ol>

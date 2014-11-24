@@ -3,12 +3,12 @@
 */
 
 .ab-shortcode { color: #2ea2cc; }
-.wp-editor-wrap { width: 80%; }
+.ab-html-notification-wrap .wp-editor-wrap { width: 80%; }
 .ab-mail-subject { width: 40%; }
 
 @media only screen and (max-width: 959px) {
  
-    .wp-editor-wrap { width: 100%; }
+    .ab-html-notification-wrap .wp-editor-wrap { width: 100%; }
     
 }
 
