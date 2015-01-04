@@ -47,6 +47,25 @@ if ( ! function_exists( 'wp_new_user_notification' ) ) {
 		$subject_user = get_option( 'ab_user_mail_subject' );
 		$subject_admin = get_option( 'ab_admin_mail_subject' );
 
+		$from_name_user = get_option( 'ab_user_mail_sender_name' );
+		if ( empty( $from_name_user ) )
+			$from_name_user = 'WordPress';
+
+		$from_name_admin = get_option( 'ab_admin_mail_sender_name' );
+		if ( empty( $from_name_admin ) )
+			$from_name_admin = 'WordPress';
+
+		$from_email_user = get_option( 'ab_user_mail_sender_email' );
+		if ( empty( $from_email_user ) )
+			$from_email_user = ab_stripurl( get_bloginfo( 'url' ) );
+
+		$from_email_admin = get_option( 'ab_admin_mail_sender_email' );
+		if ( empty( $from_email_admin ) )
+			$from_email_admin = ab_stripurl( get_bloginfo( 'url' ) );
+
+		$headers_user = 'From: ' . $from_name_user . ' <' . $from_email_user . '>  ' . "\r\n";
+		$headers_admin = 'From: ' . $from_name_admin . ' <' . $from_email_admin . '>  ' . "\r\n";
+
 		//Shortcodes
 		$search = array( "[ab-display-name]", "[ab-user-login]", "[ab-user-password]", "[ab-user-email]" );
 		$replace = array( $user->display_name, $user->user_login, $plaintext_pass, $user->user_email );
@@ -64,7 +83,7 @@ if ( ! function_exists( 'wp_new_user_notification' ) ) {
 
 		ob_end_clean();
 
-		@wp_mail( get_option( 'admin_email' ), $subject_admin, $message_admin );
+		@wp_mail( get_option( 'admin_email' ), $subject_admin, $message_admin, $headers_admin );
 
 		if ( empty( $plaintext_pass ) ) {
 			// remove html content type
@@ -82,7 +101,7 @@ if ( ! function_exists( 'wp_new_user_notification' ) ) {
 
 		ob_end_clean();
 
-		wp_mail( $user->user_email, $subject_user, $message_user );
+		wp_mail( $user->user_email, $subject_user, $message_user, $headers_user );
 
 		// remove html content type
 		remove_filter( 'wp_mail_content_type', 'wpmail_content_type' );
@@ -111,4 +130,14 @@ function ab_filter_post_content( $content = '' ) {
 	} else {
 		return $content;
 	}
+}
+
+/**
+ * Return domain name
+ */
+function ab_stripurl( $url ) {
+
+	$urlParts = parse_url( $url );
+
+	return $urlParts[ 'host' ];
 }

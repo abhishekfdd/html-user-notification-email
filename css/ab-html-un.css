@@ -7,6 +7,8 @@
 .ab-mail-subject { width: 40%; }
 .ab-mail-sender { width: 30%; }
 
+.ab-sepeartion { border-bottom: 1px solid #ddd; height: 40px; }
+
 @media only screen and (max-width: 959px) {
 
     .ab-html-notification-wrap .wp-editor-wrap { width: 100%; }

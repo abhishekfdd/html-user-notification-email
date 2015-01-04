@@ -15,7 +15,7 @@ function ab_plugin_options() {
 			<li class="ab-shortcode">Password : [ab-user-password]</li>
 			<li class="ab-shortcode">User email : [ab-user-email]</li>
 		</ol>
-
+		<hr />
 		<form method="post" action="options.php">
 
 			<?php settings_fields( 'ab-settings-group' ); ?>
@@ -36,10 +36,17 @@ function ab_plugin_options() {
 				</tr>
 				<tr valign="top">
 
-					<th scope="row"><?php _e( 'User Mail Sender', 'abs' ); ?></th>
-					<td><input class="ab-mail-sender" type="text" name="ab_user_mail_sender" placeholder="wordpress@yoursite.com" value="<?php echo get_option( 'ab_user_mail_sender' ); ?>" /></td>
+					<th scope="row"><?php _e( 'User From Name', 'abs' ); ?></th>
+					<td><input class="ab-mail-sender" type="text" name="ab_user_mail_sender_name" placeholder="yourname" value="<?php echo get_option( 'ab_user_mail_sender_name' ); ?>" /></td>
 
 				</tr>
+				<tr valign="top">
+
+					<th scope="row"><?php _e( 'User From Email', 'abs' ); ?></th>
+					<td><input class="ab-mail-sender" type="text" name="ab_user_mail_sender_email" placeholder="wordpress@yoursite.com" value="<?php echo get_option( 'ab_user_mail_sender_email' ); ?>" /></td>
+
+				</tr>
+				<tr class="ab-sepeartion" valign="top" ></tr>
 				<tr valign="top">
 
 					<th scope="row"><?php _e( 'Admin Mail Content', 'abs' ); ?></th>
@@ -54,8 +61,14 @@ function ab_plugin_options() {
 				</tr>
 				<tr valign="top">
 
-					<th scope="row"><?php _e( 'Admin Mail Sender', 'abs' ); ?></th>
-					<td><input class="ab-mail-sender" type="text" name="ab_admin_mail_sender" placeholder="wordpress@yoursite.com" value="<?php echo get_option( 'ab_admin_mail_sender' ); ?>" /></td>
+					<th scope="row"><?php _e( 'Admin From Name', 'abs' ); ?></th>
+					<td><input class="ab-mail-sender" type="text" name="ab_admin_mail_sender_name" placeholder="yourname" value="<?php echo get_option( 'ab_admin_mail_sender_name' ); ?>" /></td>
+
+				</tr>
+				<tr valign="top">
+
+					<th scope="row"><?php _e( 'Admin From Email', 'abs' ); ?></th>
+					<td><input class="ab-mail-sender" type="text" name="ab_admin_mail_sender_email" placeholder="wordpress@yoursite.com" value="<?php echo get_option( 'ab_admin_mail_sender_email' ); ?>" /></td>
 
 				</tr>
 			</table>
@@ -75,6 +88,9 @@ function ab_register_mysettings() {
 	register_setting( 'ab-settings-group', 'ab_user_mail_content' );
 	register_setting( 'ab-settings-group', 'ab_admin_mail_content' );
 	register_setting( 'ab-settings-group', 'ab_user_mail_subject' );
-	register_setting( 'ab-settings-group', 'ab_user_admin_subject' );
-	register_setting( 'ab-settings-group', 'ab_user_mail_sender' );
+	register_setting( 'ab-settings-group', 'ab_admin_mail_subject' );
+	register_setting( 'ab-settings-group', 'ab_user_mail_sender_email' );
+	register_setting( 'ab-settings-group', 'ab_admin_mail_sender_email' );
+	register_setting( 'ab-settings-group', 'ab_user_mail_sender_name' );
+	register_setting( 'ab-settings-group', 'ab_admin_mail_sender_name' );
 }
