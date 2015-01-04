@@ -4,7 +4,7 @@
  * Plugin Name: Html New User Notification
  * Plugin URI: https://wordpress.org/plugins/html-new-user-notification-email/
  * Description: New user notification mail
- * Version: 1.0
+ * Version: 2.0
  * Author: Abhishek Kumar
  * Author URI: http://github.com/abhishekfdd
  * License: GPLv2
@@ -141,3 +141,15 @@ function ab_stripurl( $url ) {
 
 	return $urlParts[ 'host' ];
 }
+
+/**
+ * Settings link
+ */
+function ab_add_action_links( $links ) {
+	$mylinks = array(
+		'<a href="' . admin_url( 'options-general.php?page=ab-plugin-menu' ) . '">Settings</a>',
+	);
+	return array_merge( $links, $mylinks );
+}
+
+add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'ab_add_action_links' );

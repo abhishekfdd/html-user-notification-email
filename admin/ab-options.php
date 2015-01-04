@@ -43,7 +43,10 @@ function ab_plugin_options() {
 				<tr valign="top">
 
 					<th scope="row"><?php _e( 'User From Email', 'abs' ); ?></th>
-					<td><input class="ab-mail-sender" type="text" name="ab_user_mail_sender_email" placeholder="wordpress@yoursite.com" value="<?php echo get_option( 'ab_user_mail_sender_email' ); ?>" /></td>
+					<td>
+						<input class="ab-mail-sender" type="text" name="ab_user_mail_sender_email" placeholder="wordpress@yoursite.com" value="<?php echo get_option( 'ab_user_mail_sender_email' ); ?>" />
+						<p class="ab-note"><?php _e( 'You can specify the from name and from email. If left blank  default will be used.', 'ab' ); ?></p>
+					</td>
 
 				</tr>
 				<tr class="ab-sepeartion" valign="top" ></tr>
@@ -68,7 +71,10 @@ function ab_plugin_options() {
 				<tr valign="top">
 
 					<th scope="row"><?php _e( 'Admin From Email', 'abs' ); ?></th>
-					<td><input class="ab-mail-sender" type="text" name="ab_admin_mail_sender_email" placeholder="wordpress@yoursite.com" value="<?php echo get_option( 'ab_admin_mail_sender_email' ); ?>" /></td>
+					<td>
+						<input class="ab-mail-sender" type="text" name="ab_admin_mail_sender_email" placeholder="wordpress@yoursite.com" value="<?php echo get_option( 'ab_admin_mail_sender_email' ); ?>" />
+						<p class="ab-note"><?php _e( 'You can specify the from name and from email. If left blank  default will be used.', 'ab' ); ?></p>
+					</td>
 
 				</tr>
 			</table>
