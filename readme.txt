@@ -32,7 +32,7 @@ This plugin was created by Abhishek Kumar http://github.com/abhishekfdd
 
 == Changelog ==
 
-= 1.1.0 =
+= 2.0.0 =
 * Option for changing sender name and email.
 
 = 1.0.0 =
