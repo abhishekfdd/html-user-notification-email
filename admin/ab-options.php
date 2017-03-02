@@ -10,10 +10,10 @@ function ab_plugin_options() {
 		<h2><?php _e( 'Html User Notification', 'abs' ); ?></h2>
 		<h4><?php _e( 'Shortcode\'s', 'abs' ); ?></h4>
 		<ol>
-			<li class="ab-shortcode">User Display name : [ab-display-name]</li>
-			<li class="ab-shortcode">Username : [ab-user-login]</li>
-			<li class="ab-shortcode">Password : [ab-user-password]</li>
-			<li class="ab-shortcode">User email : [ab-user-email]</li>
+                    <li class="ab-shortcode"><?php _e( 'User Display name : [ab-display-name]', 'abs' ); ?></li>
+                    <li class="ab-shortcode"><?php _e( 'Username : [ab-user-login]', 'abs' ); ?></li>
+                    <li class="ab-shortcode"><?php _e( 'Password : [ab-user-password]', 'abs' ); ?></li>
+                    <li class="ab-shortcode"><?php _e( 'User email : [ab-user-email]', 'abs' ); ?></li>
 		</ol>
 		<hr />
 		<form method="post" action="options.php">
